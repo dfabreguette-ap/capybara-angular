@@ -47,7 +47,7 @@ module Capybara
 
       def setup_ready
         page.execute_script <<-JS
-          var el = document.querySelector('[ng-app], [data-ng-app]') || document.querySelector('body');
+          var el = document.querySelector('[ng-app], [data-ng-app], [angular-rails-app]') || document.querySelector('body');
 
           window.angularReady = false;
 
